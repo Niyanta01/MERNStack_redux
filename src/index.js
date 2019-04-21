@@ -8,7 +8,6 @@ import { BrowserRouter} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store/store';
 
-//if we want to integrate bootstrap we can do that by making it as global styles 
 
 ReactDOM.render(
 <BrowserRouter>

@@ -1,4 +1,3 @@
-// created new comp and imported few things
 
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
@@ -13,11 +12,8 @@ class Product extends Component{
     }
     
     componentDidMount(){
-        //lifecycle method just like ngOnInit and to decalre ti we do like this
         console.log("component init");
         console.log(this.props.dispatch);
-        //since we want to get the data in component we need to pass the fetch prod fun in here at init
-        //and for that we have to dispatch an devent to call th fetch prod method
         this.props.dispatch(fetchProduct());
     }
 
@@ -30,12 +26,7 @@ class Product extends Component{
     }
 
     deleteProducts = (productCode) =>{
-        //we have to dispatch the action from actions using this fun and call the delete product fun from action 
-        //after inporting ie we are dispatching actios
         this.props.dispatch(deleteProduct_action(productCode));
-        //we are passing productcode as the value to deletethe specific products and we also pass it in deleteproducts
-        //of actions
-        
     }
   
     render(){
@@ -63,7 +54,6 @@ class Product extends Component{
                  <tbody>
                  {
                     this.props.products  && this.props.products.map((item, index) => (
-                        // checking if the values are present ornot and then mapping it
                          <tr key={index}>
                              <td>
                                  {
@@ -96,9 +86,6 @@ class Product extends Component{
     }
 }
 
-//this will map the props of current comp to application state which is store
-//this fun will bydefault have store as 1st para and whatever we return from it will automatically get mapped into properties
-
 
 function mapStateToProps(store){
 
@@ -106,9 +93,6 @@ function mapStateToProps(store){
         products:store.products,
         users: store.users
     }
-// scne stire has multiple data we have to give . to access the specific data
 }
 
 export default connect(mapStateToProps)(Product);
-//we use this connect method to connect the comp directly to store and connect returns a fun so it has 2 () 
-//and then in the 2ndone as it returns a fun we will pass the comp that we want to connect as a para to the return fun pf connect 

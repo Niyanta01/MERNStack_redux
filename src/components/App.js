@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import './App.css';
 import Product from './products';
 import Create from './create';
 import Home from './home';
@@ -11,7 +10,6 @@ import  PrivateRoute from "./PrivateRoute";
 
 class App extends Component {
   
-  //we do not need them here as we are going to define them inside actions creator 
   
   render() {
 
@@ -24,7 +22,6 @@ class App extends Component {
           <PrivateRoute path="/products/:pid" component={Detail}/>
           <PrivateRoute path="/products" render={()=>{
             return <Product/>
-            // removed products as we do not have access to it
           }}/>
          
           <PrivateRoute path="/create" render={()=>{

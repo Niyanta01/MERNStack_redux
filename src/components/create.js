@@ -18,24 +18,7 @@ class Create extends Component {
 
     createProducts = (event) =>{
         event.preventDefault();
-        
-        //this.props.dispatch(addProduct(this.state.products));
-        
-        //we have to dispatch the action from actions using this fun and call the add product fun from action 
-        //after inporting ie we are dispatching actios and from there for create products we have internal state
-        //for comp as well to manage the data coming from IP and then in the addproducts fun of acrions also 
-        //we have to add products inside the obj so that obj wil have 2 prop one for type and other products for data
-        
-        //this.props.history.push("/products");
-
-        console.log(serializeForm(event.target, {hash:true}));
-        //for serializinf form we use this method and then as we are validating form we pass onsubmit 
-        //event in the form tag and not onclick event.
-
-
-
-        
-    }
+          }
 
   
     productsChangeHandler = (event) =>{

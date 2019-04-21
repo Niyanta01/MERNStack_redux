@@ -1,4 +1,3 @@
-//data for users
 const initalAppState = [
     {
         "user_id" :1,
@@ -18,7 +17,6 @@ const initalAppState = [
     }
 ];
 
-//reducer fun for user and it has 2 param state, action and then we return the state with inital value as userdata
 const userReducer = (state = initalAppState, action) =>{
     return state; 
 };
